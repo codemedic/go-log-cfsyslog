@@ -1,0 +1,4 @@
+github.com/cloudflare/golog v0.0.0-20240916140605-f0a62507a095 h1:TDlOzARgIiU13njJotmcDaPxVlhtzrqSRrFiW9bwt6E=
+github.com/cloudflare/golog v0.0.0-20240916140605-f0a62507a095/go.mod h1:GzgSpr2lv7vlMIW91mGAfgLdy6znFhst73xhxhDJK/M=
+github.com/codemedic/go-log v1.0.0-rc1 h1:CWTNRaS+M7t8twcG6tDbZEXjwXWn9B4zatTLf/JBoQ8=
+github.com/codemedic/go-log v1.0.0-rc1/go.mod h1:pezD/xQH+TpNc540MKg6QQkNiGMazpuZZjW6aeiBuME=
