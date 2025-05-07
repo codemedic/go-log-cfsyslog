@@ -29,6 +29,18 @@ type cfSyslogLogger struct {
 	logger *cflog.Logger
 }
 
+func (c *cfSyslogLogger) PrefixLogf(level golog.Level, _ int, prefix, format string, value ...interface{}) {
+	if c.logger == nil {
+		return
+	}
+
+	if !level.IsEnabled(c.Level()) {
+		return
+	}
+
+	c.logger.Printf(toCFLevels(level), prefix, format, value...)
+}
+
 func (c *cfSyslogLogger) Write(p []byte) (n int, err error) {
 	level := c.SortStdlog(c.PrintLevel(), p)
 	if level.IsEnabled(c.Level()) {
@@ -47,19 +59,7 @@ func (c *cfSyslogLogger) Logf(level golog.Level, _ int, format string, value ...
 		return
 	}
 
-	logf := c.logger.Debug
-	switch level {
-	case golog.Info:
-		logf = c.logger.Info
-	case golog.Warning:
-		logf = c.logger.Warn
-	case golog.Error:
-		logf = c.logger.Error
-	default:
-		// debug, it shall be!
-	}
-
-	logf("", format, value...)
+	c.logger.Printf(toCFLevels(level), "", format, value...)
 }
 
 func (c *cfSyslogLogger) Close() {

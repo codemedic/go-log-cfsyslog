@@ -3,3 +3,4 @@ github.com/cloudflare/golog v0.0.0-20240916140605-f0a62507a095/go.mod h1:GzgSpr2
 github.com/codemedic/go-log v1.0.0-rc2 h1:O76FoeKDwxaAeYdYmISZVsvC97ZnxxUYFsEtqFo9OAM=
 github.com/codemedic/go-log v1.0.0-rc2/go.mod h1:pezD/xQH+TpNc540MKg6QQkNiGMazpuZZjW6aeiBuME=
 github.com/codemedic/go-log v1.0.0/go.mod h1:pezD/xQH+TpNc540MKg6QQkNiGMazpuZZjW6aeiBuME=
+github.com/codemedic/go-log v1.1.0-rc1/go.mod h1:pezD/xQH+TpNc540MKg6QQkNiGMazpuZZjW6aeiBuME=
